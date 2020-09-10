@@ -1,0 +1,40 @@
+<div style="margin-left: 5%;">
+    <form>
+        <table>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <td>
+                    <input type = "number" #Id pattern="[0-9]" required value="{{userDetails.id}}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Name
+                </th>
+                <td>
+                    <input type = "text" #name pattern="[a-zA-Z]" required value="{{userDetails.name}}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Ph_no
+                </th>
+                <td>
+                    <input type = "number" #ph_no pattern="[0-9]{10}" required value="{{userDetails.ph_no}}"/>
+                </td>
+            </tr>           
+            <tr>
+                <td colspan="1">
+                    <button type='button' class="btn btn-success" (click)="updateRecord(Id.value,name.value,ph_no.value)">Add</button>
+                </td>
+                <td colspan="1">
+                    <button type='button' class="btn btn-warning" routerLink="">Go back</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

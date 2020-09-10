@@ -1,0 +1,24 @@
+<div >
+    <h3>Add Contact</h3>
+    <br>
+
+    <form >
+        <div >
+            <label for="firstName">ID: </label>
+            <input placeholder="Id" class="form-control" #Id pattern="[0-9]" required />
+        </div>
+        <br>
+        <div>
+            <label for="firstName">Name: </label>
+            <input placeholder="Name" class="form-control" #name  pattern="[a-zA-Z]" required/>
+        </div>
+        <br>
+        <div >
+            <label for="firstName">Contact Number: </label>
+            <input placeholder="Phonenumber" class="form-control" #phone pattern="[0-9]{10}" required />
+        </div>
+        <br>
+        <button type="button" class="btn btn-success" (click)="addcontact(Id.value,name.value,phone.value)">Add New Contact</button>
+        <button type="button" class="btn btn-warning" (click)="backtohome()">Home</button>
+    </form>
+</div>

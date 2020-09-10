@@ -1,0 +1,28 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th >name</th>
+            <th>contact number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of contacts | filter:term">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.ph_no}}</td>
+            <td>
+                <button type="button" class="btn btn-warning" (click)="deleteContact(item)">X</button>
+                <button class="btn btn-success" (click)="editContact(item.id)">Edit</button>
+           
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
